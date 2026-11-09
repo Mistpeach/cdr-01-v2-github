@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2026 Mistpeach
+
+# 需要 Python 3.10+（开发与测试使用 3.13 / 3.15）。
+# bleak 兼容 0.22 与 3.x（上位机已适配两种 API）。
+bleak>=0.22,<4
+
+# GUI 依赖
+PySide6>=6.6
+
+# 可选：视频同步需要 python-mpv + 系统 libmpv（Windows 放置 mpv-2.dll）。
+# 未安装时上位机自动降级为纯脚本播放。
+python-mpv>=1.0.7

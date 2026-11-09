@@ -1,0 +1,27 @@
+CDR01 v2
+Copyright (c) 2026 Mistpeach
+
+This distribution includes software derived from:
+
+  0721Robotics / cdr01-firmware
+  https://github.com/0721robotics/cdr01-firmware
+  Licensed under the Apache License, Version 2.0.
+
+Modifications by Mistpeach, 2026 (Apache-2.0 section 4(b)):
+
+  - Ported the original motion engine and command parser to an ESP32-S3
+    target that drives six servos directly via LEDC.
+  - Replaced the original BLE transport and text protocol with a new
+    single-connection, CRC16-framed protocol (V2), including a new host
+    application protocol codec.
+  - Removed Wi-Fi/UDP support and the legacy text protocol; added
+    dual-serial logging and per-side (left/right) command routing.
+  - Added a new PC host application (Python + PySide6 + bleak) with
+    original-format CSV playback and optional mpv video sync.
+
+Documentation in this distribution is licensed under CC BY 4.0 and is
+based on the CDR01 project by 0721Robotics
+(https://github.com/0721robotics/cdr01-project).
+
+This is an unofficial derivative project. It is not affiliated with or
+endorsed by the original author.
